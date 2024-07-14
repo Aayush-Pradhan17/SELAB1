@@ -1,0 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+d=np.array([0,1],[4,15],[8,28],[12,22],[16,18],[20,12],[24,10]])
+t=data[:,0]
+temperatures=data[:,1]
+coefficients=np.polyfit(t,temperatures ,2)
+a ,b ,c= coefficients
+model_temperature= a* (t**2) + (b*t)+c
+plt.scatter(t,temperatures, label='Actual Data')
+plt.plot(t, model_temperatures, color'red',label=' Quadratic Model')
+plt.xlabel("Time of day(hours)")
+plt.ylabel("Temperature")
+plt.legend()
+plt.show()
